@@ -3,7 +3,7 @@ This tutorial covers creating an object detection plugin for a [Unity](https://u
 
 
 
-
+https://user-images.githubusercontent.com/9126128/185470552-bd485f66-5181-4767-b5c4-4e38d04d896d.mp4
 
 
 
