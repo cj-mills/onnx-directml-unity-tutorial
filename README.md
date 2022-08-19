@@ -52,3 +52,9 @@ https://user-images.githubusercontent.com/9126128/185470552-bd485f66-5181-4767-b
 
 
 ## Tutorial Links
+
+[Training Tutorial](https://christianjmills.com/IceVision-to-OpenVINO-to-Unity-Tutorial-1/): covers training and exporting the model
+
+[Part 1](https://christianjmills.com/ONNX-DiretML-to-Unity-Tutorial-1/): covers creating a dynamic link library (DLL) file in Visual Studio to perform inference with ONNX Runtime and DirectML
+
+[Part 2](https://christianjmills.com/ONNX-DiretML-to-Unity-Tutorial-2/): covers performing object detection in a Unity project with ONNX Runtime and DirectML
