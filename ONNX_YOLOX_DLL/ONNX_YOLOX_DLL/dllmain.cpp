@@ -372,6 +372,7 @@ extern "C" {
 		for (int p = 0; p < n_pixels; p++)
 		{
 			for (int ch = 0; ch < n_channels; ch++) {
+				// Scale and normalize each value
 				input_data[ch * n_pixels + p] = ((input_image.data[p * n_channels + ch] / 255.0f) - mean[ch]) / std_dev[ch];
 			}
 		}
