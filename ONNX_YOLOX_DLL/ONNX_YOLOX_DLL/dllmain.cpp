@@ -200,6 +200,7 @@ extern "C" {
 		ort->CreateSessionOptions(&session_options);
 		std::string provider_name = execution_provider;
 
+		// Add the specified execution provider
 		if (provider_name.find("CPU") != std::string::npos) {
 			return_val = 1;
 		}
