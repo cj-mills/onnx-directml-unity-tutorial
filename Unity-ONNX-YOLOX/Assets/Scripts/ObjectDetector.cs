@@ -9,13 +9,12 @@ using System.IO;
 #if UNITY_EDITOR
 using UnityEditor;
 
-
 [InitializeOnLoad]
 public class Startup
 {
     static Startup()
     {
-        // Get all files named "DirectML.dll"
+        // Get all files named "DirectML.dll" in the Assets directory
         string[] files = Directory.GetFiles("./Assets/", "DirectML.dll", SearchOption.AllDirectories);
         // Iterate through each found file
         foreach (string file in files)
@@ -23,12 +22,13 @@ public class Startup
             // Check if the file is in the "x86_64" folder
             if (file.Contains("x86_64"))
             {
-                // Define file path for the Editor application directory
+                // Get the file path for the Editor application
                 string editorPath = EditorApplication.applicationPath;
+                // Extract the parent folder for the Editor application
                 string editorDir = Directory.GetParent(editorPath).ToString();
-                Debug.Log($"Editor Directory: {editorDir}");
+                // Define target file path
                 string targetPath = $"{editorDir}/DirectML.dll";
-                // Only copy the file to the StreamingAssets folder if it is not already present
+                // Only copy the file to the Editor application folder if it is not already present
                 if (!File.Exists(targetPath)) File.Copy(file, targetPath);
             }
         }
@@ -267,9 +267,10 @@ public class ObjectDetector : MonoBehaviour
         // Get the paths for each model folder
         foreach (string dir in System.IO.Directory.GetDirectories($"{Application.streamingAssetsPath}/{onnxModelsDir}"))
         {
+            // Extract the model folder name
             string modelName = dir.Split('\\')[1];
-
-            modelNames.Add(modelName.Substring(0, modelName.Length));
+            // Add name to list of model names
+            modelNames.Add(modelName);
 
             // Get the paths for the ONNX file for each model
             foreach (string file in System.IO.Directory.GetFiles(dir))
@@ -442,7 +443,7 @@ public class ObjectDetector : MonoBehaviour
 
         // Get the file paths for available ONNX models
         GetONNXModels();
-
+        // Initialize the ONNX Runtime API
         InitOrtAPI();
         // Get the names of available ONNX execution providers
         GetONNXExecutionProviders();
