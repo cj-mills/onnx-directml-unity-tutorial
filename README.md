@@ -1,8 +1,11 @@
 # ONNX Runtime → DirectML → Unity → Tutorial
-This tutorial covers creating an object detection plugin for a [Unity](https://unity.com/) game engine project using [ONNX Runtime](https://onnxruntime.ai/docs/) and [DirectML](https://docs.microsoft.com/en-us/windows/ai/directml/dml).
+## Tutorial Links
+* [Training Tutorial](https://christianjmills.com/posts/icevision-openvino-unity-tutorial/part-1/): Train a YOLOX model using IceVision.
+* [Part 1](https://christianjmills.com/posts/onnx-directml-unity-tutorial/part-1/): Create a dynamic link library (DLL) file in Visual Studio to perform object detection with a YOLOX model using ONNX Runtime and DirectML. 
+* [Part 2](https://christianjmills.com/posts/onnx-directml-unity-tutorial/part-2/): Perform object detection in a Unity project with ONNX Runtime and DirectML. 
 
 
-
+## Demo Video
 https://user-images.githubusercontent.com/9126128/185470552-bd485f66-5181-4767-b5c4-4e38d04d896d.mp4
 
 
@@ -48,13 +51,3 @@ https://user-images.githubusercontent.com/9126128/185470552-bd485f66-5181-4767-b
 </details>
 
 
-
-
-
-## Tutorial Links
-
-[Training Tutorial](https://christianjmills.com/posts/icevision-openvino-unity-tutorial/part-1/): covers training and exporting the model
-
-[Part 1](https://christianjmills.com/posts/onnx-directml-unity-tutorial/part-1/): covers creating a dynamic link library (DLL) file in Visual Studio to perform inference with ONNX Runtime and DirectML
-
-[Part 2](https://christianjmills.com/posts/onnx-directml-unity-tutorial/part-2/): covers performing object detection in a Unity project with ONNX Runtime and DirectML
